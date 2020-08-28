@@ -30,15 +30,15 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-# Creamos la base de datos "challengemeli" donde estaran almacenados los archivos
+# Creamos la base de datos "googledrive" donde estaran almacenados los archivos
 
-mycursor.execute("CREATE DATABASE challengemeli")
+mycursor.execute("CREATE DATABASE googledrive")
 
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
   password="",
-  database="challengemeli"
+  database="googledrive"
 )
 
 mycursor = mydb.cursor()
@@ -56,7 +56,7 @@ def insertFilesIntoTable(items):
 
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='challengemeli',
+                                             database='googledrive',
                                              user='root',
                                              password='')
         cursor = connection.cursor()
@@ -86,7 +86,7 @@ def insertFilesIntoTable(items):
 def insertFilePublicIntoTable(id, name, mime_type, owners, modified_time):
     try:
         connection = mysql.connector.connect(host='localhost',
-                                             database='challengemeli',
+                                             database='googledrive',
                                              user='root',
                                              password='')
         cursor = connection.cursor()
